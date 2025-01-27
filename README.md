@@ -92,15 +92,15 @@
     }
 
     class Entrenador {
-        + entrenar(Ciclista ciclista): void
+        + entrenar(Ciclista ciclista)
     }
 
     class Carrera {
         - tipoEtapa: String
         - clima: String
         - dificultad: int
-        + simular(Escuadron[] escuadrones): void
-        + afectarAtributos(Ciclista ciclista): void
+        + simular(Escuadron[] escuadrones)
+        + afectarAtributos(Ciclista ciclista)
     }
 
     class Fisioterapeuta {
