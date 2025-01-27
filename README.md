@@ -8,14 +8,14 @@ El proyecto esta hecho para simular la dinamica de una carrera profesional de eq
 Cada escuadrón debe cumplir con los siguientes requisitos:
 
 
-Contar con exactamente 6 ciclistas, distribuidos en roles específicos:
+Cada escuadron tiene exactamente 6 ciclistas, distribuidos en los distintos roles específicos:
 
 
-- Escalador: Especialista en etapas de montaña, con habilidades como aceleración en subida y manejo de pendientes.
+- Escalador: Especialista en etapas de montaña, aconstumbrados a las pendientes y acelerar el ritmo en subida.
 
-- Rodador: Destacado en etapas llanas por su pedaleo constante y alta cadencia.
+- Rodador: Destacado en etapas planas por su pedaleo constante y buena resistencia.
 
-- Embalador: Enfocado en sprints finales, con alta velocidad y potencia promedio.
+- Embalador: Enfocado en los sprints finales, con alta velocidad y potencia promedio.
 
 - Gregario: Ciclista de apoyo, que protege al líder y mantiene el ritmo del equipo.
 
