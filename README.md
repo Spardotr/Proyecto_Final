@@ -82,6 +82,58 @@ Al finalizar la carrera, se generan los siguientes datos:
 
 -Ganador de la etapa, con información detallada del ciclista y su escuadrón.
 
+
+Solución Preliminar
+
+La solución al problema se basa en este programa orientado a objetos, utilizando las herramientas vistas en clase como abstracción, herencia, composición y polimorfismo. A continuación, se detalla la estructura y funcionalidad del sistema:
+
+1. Estructura del sistema
+
+El sistema incluye las siguientes clases:
+
+-Persona: Clase base para Ciclista y Fisioterapeuta.
+
+-Ciclista: Clase abstracta que define los atributos y métodos comunes a todos los ciclistas.
+
+-Subclases específicas: Escalador, Rodador, Embalador, Gregario, Clasicómano, Contrarrelojista.
+
+-Escuadron: Representa al equipo, con métodos para gestionar ciclistas, tiempos acumulados y estadísticas.
+
+-Carrera: Define los parámetros de cada etapa (tipo, clima, dificultad) y simula la competencia.
+
+-Entrenador: Mejora atributos como resistencia y energía de los ciclistas antes de la carrera.
+
+2. Dinámica del sistema
+
+Entrenamiento y estrategia
+
+Antes de la carrera, un Entrenador puede mejorar los atributos de los ciclistas.
+
+Cada escuadrón define una estrategia para la carrera, como priorizar al escalador en etapas de montaña o al rodador en etapas llanas.
+
+Simulación de carreras
+
+Los ciclistas seleccionados compiten según las condiciones de la etapa.
+
+Se simulan los siguientes factores:
+
+-Clima: Afecta atributos como resistencia y energía (ejemplo: lluvia beneficia a escaladores).
+
+-Dificultad: Reduce la energía de los ciclistas proporcionalmente al nivel de exigencia.
+
+-Eventos aleatorios: Introducen variabilidad con penalizaciones (fallos mecánicos, caídas) o beneficios (condiciones ideales).
+
+Generación de estadísticas
+
+Al finalizar una carrera, se calculan:
+
+-Tiempos totales por escuadrón.
+
+-Ciclistas más destacados (por tiempo acumulado y desempeño).
+
+-Ganador de la etapa.
+
+
 ```mermaid
   classDiagram
     class Persona {
