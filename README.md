@@ -11,27 +11,27 @@ Cada escuadrón debe cumplir con los siguientes requisitos:
 Contar con exactamente 6 ciclistas, distribuidos en roles específicos:
 
 
--Escalador: Especialista en etapas de montaña, con habilidades como aceleración en subida y manejo de pendientes.
+- Escalador: Especialista en etapas de montaña, con habilidades como aceleración en subida y manejo de pendientes.
 
--Rodador: Destacado en etapas llanas por su pedaleo constante y alta cadencia.
+- Rodador: Destacado en etapas llanas por su pedaleo constante y alta cadencia.
 
--Embalador: Enfocado en sprints finales, con alta velocidad y potencia promedio.
+- Embalador: Enfocado en sprints finales, con alta velocidad y potencia promedio.
 
--Gregario: Ciclista de apoyo, que protege al líder y mantiene el ritmo del equipo.
+- Gregario: Ciclista de apoyo, que protege al líder y mantiene el ritmo del equipo.
 
--Clasicómano: Experto en carreras de un día o clásicas, con equilibrio entre velocidad y resistencia.
+- Clasicómano: Experto en carreras de un día o clásicas, con equilibrio entre velocidad y resistencia.
 
--Contrarrelojista: Ciclista con alta velocidad máxima, ideal para etapas individuales.
+- Contrarrelojista: Ciclista con alta velocidad máxima, ideal para etapas individuales.
 
 
 El escuadrón tiene:
 
 
--Un nombre.
+- Un nombre.
 
--Un país de origen (opcional).
+- Un país de origen (opcional).
 
--Un atributo estático que registra el tiempo acumulado de todos sus ciclistas.
+- Un atributo estático que registra el tiempo acumulado de todos sus ciclistas.
 
 
 2. Ciclistas
@@ -40,11 +40,11 @@ El escuadrón tiene:
 Cada ciclista cuenta con:
 
 
--Identificador único, nombre, y tiempo acumulado (inicia en 0 minutos).
+- Identificador único, nombre, y tiempo acumulado (inicia en 0 minutos).
 
--Especialidad y contextura, que afectan su desempeño en las carreras.
+- Especialidad y contextura, que afectan su desempeño en las carreras.
 
--Resistencia y energía, atributos dinámicos que cambian según las condiciones de las carreras.
+- Resistencia y energía, atributos dinámicos que cambian según las condiciones de las carreras.
 
 
 3. Simulación de carreras
@@ -53,7 +53,7 @@ Cada ciclista cuenta con:
 Los escuadrones participan en diferentes tipos de carreras:
 
 
--Etapas de montaña, llanos con curvas, semi llanos, carreras de un solo día, y llanos en recta.
+- Etapas de montaña, llanos con curvas, semi llanos, carreras de un solo día, y llanos en recta.
 
 Según el tipo de carrera, se selecciona al ciclista más adecuado para competir.
 
@@ -63,11 +63,11 @@ Los gregarios no compiten directamente, pero apoyan al líder del escuadrón.
 Durante la carrera:
 
 
--A cada ciclista se le asigna un tiempo aleatorio no mayor a 36,000 segundos.
+- A cada ciclista se le asigna un tiempo aleatorio no mayor a 36,000 segundos.
 
--Factores como clima (lluvioso, soleado) y dificultad de la etapa afectan el rendimiento.
+- Factores como clima (lluvioso, soleado) y dificultad de la etapa afectan el rendimiento.
 
--Eventos aleatorios, como fallos mecánicos o caídas, penalizan o benefician el tiempo de los ciclistas.
+- Eventos aleatorios, como fallos mecánicos o caídas, penalizan o benefician el tiempo de los ciclistas.
 
 
 5. Resultados y estadísticas
@@ -76,11 +76,11 @@ Durante la carrera:
 Al finalizar la carrera, se generan los siguientes datos:
 
 
--Tiempos acumulados por escuadrón.
+- Tiempos acumulados por escuadrón.
 
--Ciclistas destacados.
+- Ciclistas destacados.
 
--Ganador de la etapa, con información detallada del ciclista y su escuadrón.
+- Ganador de la etapa, con información detallada del ciclista y su escuadrón.
 
 
 Solución Preliminar
@@ -91,17 +91,17 @@ La solución al problema se basa en este programa orientado a objetos, utilizand
 
 El sistema incluye las siguientes clases:
 
--Persona: Clase base para Ciclista y Fisioterapeuta.
+- Persona: Clase base para Ciclista y Fisioterapeuta.
 
--Ciclista: Clase abstracta que define los atributos y métodos comunes a todos los ciclistas.
+- Ciclista: Clase abstracta que define los atributos y métodos comunes a todos los ciclistas.
 
--Subclases específicas: Escalador, Rodador, Embalador, Gregario, Clasicómano, Contrarrelojista.
+- Subclases específicas: Escalador, Rodador, Embalador, Gregario, Clasicómano, Contrarrelojista.
 
--Escuadron: Representa al equipo, con métodos para gestionar ciclistas, tiempos acumulados y estadísticas.
+- Escuadron: Representa al equipo, con métodos para gestionar ciclistas, tiempos acumulados y estadísticas.
 
--Carrera: Define los parámetros de cada etapa (tipo, clima, dificultad) y simula la competencia.
+- Carrera: Define los parámetros de cada etapa (tipo, clima, dificultad) y simula la competencia.
 
--Entrenador: Mejora atributos como resistencia y energía de los ciclistas antes de la carrera.
+- Entrenador: Mejora atributos como resistencia y energía de los ciclistas antes de la carrera.
 
 2. Dinámica del sistema
 
@@ -117,21 +117,21 @@ Los ciclistas seleccionados compiten según las condiciones de la etapa.
 
 Se simulan los siguientes factores:
 
--Clima: Afecta atributos como resistencia y energía (ejemplo: lluvia beneficia a escaladores).
+- Clima: Afecta atributos como resistencia y energía (ejemplo: lluvia beneficia a escaladores).
 
--Dificultad: Reduce la energía de los ciclistas proporcionalmente al nivel de exigencia.
+- Dificultad: Reduce la energía de los ciclistas proporcionalmente al nivel de exigencia.
 
--Eventos aleatorios: Introducen variabilidad con penalizaciones (fallos mecánicos, caídas) o beneficios (condiciones ideales).
+- Eventos aleatorios: Introducen variabilidad con penalizaciones (fallos mecánicos, caídas) o beneficios (condiciones ideales).
 
 Generación de estadísticas
 
 Al finalizar una carrera, se calculan:
 
--Tiempos totales por escuadrón.
+- Tiempos totales por escuadrón.
 
--Ciclistas más destacados (por tiempo acumulado y desempeño).
+- Ciclistas más destacados (por tiempo acumulado y desempeño).
 
--Ganador de la etapa.
+- Ganador de la etapa.
 
 
 ```mermaid
