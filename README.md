@@ -10,17 +10,24 @@
 
     class Ciclista {
         - identificador: int
-        - tiempo: float
+        - tiempo: Float
         - especialidad: String
         - contextura: String
+        - resistencia: int
+        - energia: int
+        + calcularDesempeno(tipoEtapa: String, clima: String): Float
         + getIdentificador(): int
         + setIdentificador(identificador: int)
-        + getTiempo(): float
-        + setTiempo(tiempo: float)
+        + getTiempo(): Float
+        + setTiempo(tiempo: Float)
         + getEspecialidad(): String
         + setEspecialidad(especialidad: String)
         + getContextura(): String
         + setContextura(contextura: String)
+        + getResistencia(): int
+        + setResistencia(resistencia: int)
+        + getEnergia(): int
+        + setEnergia(energia: int)
     }
 
     class Clasicomano {
@@ -30,39 +37,39 @@
     }
 
     class Contrarrelojista {
-        - velocidad_maxima: float
+        - velocidad_maxima: Float
         + visualizar(): String
         + concentrarse(): String
-        + getVelocidad_maxima(): float
-        + setVelocidad_maxima(velocidad_maxima: float)
+        + getVelocidad_maxima(): Float
+        + setVelocidad_maxima(velocidad_maxima: Float)
     }
 
     class Embalador {
-        - potencia_promedio: float
-        - velocidad_promedio: float
+        - potencia_promedio: Float
+        - velocidad_promedio: Float
         + aumentar_ritmo(): String
         + bajar_ritmo(): String
-        + getPotencia_promedio(): float
-        + setPotencia_promedio(potencia_promedio: float)
-        + getVelocidad_promedio(): float
-        + setVelocidad_promedio(velocidad_promedio: float)
+        + getPotencia_promedio(): Float
+        + setPotencia_promedio(potencia_promedio: Float)
+        + getVelocidad_promedio(): Float
+        + setVelocidad_promedio(velocidad_promedio: Float)
     }
 
     class Escalador {
-        - aceleracion_subida: float
-        - grado_rampa: float
+        - aceleracion_subida: Float
+        - grado_rampa: Float
         + pedalear_sentado(): String
         + pedalear_depie(): String
-        + getAceleracion_subida(): float
-        + setAceleracion_subida(aceleracion_subida: float)
-        + getGrado_rampa(): float
-        + setGrado_rampa(grado_rampa: float)
+        + getAceleracion_subida(): Float
+        + setAceleracion_subida(aceleracion_subida: Float)
+        + getGrado_rampa(): Float
+        + setGrado_rampa(grado_rampa: Float)
     }
 
     class Rodador {
-        - pedaleo: float
-        + getPedaleo(): float
-        + setPedaleo(pedaleo: float)
+        - pedaleo: Float
+        + getPedaleo(): Float
+        + setPedaleo(pedaleo: Float)
     }
 
     class Gregario {
@@ -74,16 +81,34 @@
     class Escuadron {
         - nombre_escuadron: String
         - pais: String
-        - tiempo_ciclistas: float
+        - tiempo_ciclistas: Float
         - ciclistas: Ciclista[]
         - fisioterapeuta : Fisioterapeuta
-        + sumarTiempos(tiempo: float)
+        - estrategia: String
+        + seleccionarLider(): Ciclista
+        + apoyarLider(lider: Ciclista)
+        + generarEventosAleatorios(ciclista: Ciclista)
+        + calcularEstadisticas(): String
+    }
+
+    class Entrenador {
+        + entrenar(Ciclista ciclista): void
+    }
+
+    class Carrera {
+        - tipoEtapa: String
+        - clima: String
+        - dificultad: int
+        + simular(Escuadron[] escuadrones): void
+        + afectarAtributos(Ciclista ciclista): void
     }
 
     class Fisioterapeuta {
         + getCedula(): int
         + setCedula(cedula: int)
     }
+
+
 
     Persona <|-- Ciclista
     Ciclista <|-- Clasicomano
@@ -92,7 +117,8 @@
     Ciclista <|-- Escalador
     Ciclista <|-- Rodador
     Ciclista <|-- Gregario
-    Escuadron --> Ciclista 
-    Escuadron --> Fisioterapeuta 
+    Escuadron --> Ciclista : tiene
+    Escuadron --> Fisioterapeuta : incluye un
+    Escuadron --> Entrenador : tiene un
+    Escuadron --> Carrera : participa
     Gregario --> Funcion_peloton 
-
