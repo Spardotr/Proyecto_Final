@@ -15,8 +15,8 @@
         - contextura: String
         + getIdentificador(): int
         + setIdentificador(identificador: int)
-        + getTiempo(): double
-        + setTiempo(tiempo: double)
+        + getTiempo(): float
+        + setTiempo(tiempo: float)
         + getEspecialidad(): String
         + setEspecialidad(especialidad: String)
         + getContextura(): String
@@ -30,39 +30,39 @@
     }
 
     class Contrarrelojista {
-        - velocidad_maxima: double
+        - velocidad_maxima: float
         + visualizar(): String
         + concentrarse(): String
-        + getVelocidad_maxima(): double
-        + setVelocidad_maxima(velocidad_maxima: double)
+        + getVelocidad_maxima(): float
+        + setVelocidad_maxima(velocidad_maxima: float)
     }
 
     class Embalador {
-        - potencia_promedio: double
-        - velocidad_promedio: double
+        - potencia_promedio: float
+        - velocidad_promedio: float
         + aumentar_ritmo(): String
         + bajar_ritmo(): String
-        + getPotencia_promedio(): double
-        + setPotencia_promedio(potencia_promedio: double)
-        + getVelocidad_promedio(): double
-        + setVelocidad_promedio(velocidad_promedio: double)
+        + getPotencia_promedio(): float
+        + setPotencia_promedio(potencia_promedio: float)
+        + getVelocidad_promedio(): float
+        + setVelocidad_promedio(velocidad_promedio: float)
     }
 
     class Escalador {
-        - aceleracion_subida: double
-        - grado_rampa: double
+        - aceleracion_subida: float
+        - grado_rampa: float
         + pedalear_sentado(): String
         + pedalear_depie(): String
-        + getAceleracion_subida(): double
-        + setAceleracion_subida(aceleracion_subida: double)
-        + getGrado_rampa(): double
-        + setGrado_rampa(grado_rampa: double)
+        + getAceleracion_subida(): float
+        + setAceleracion_subida(aceleracion_subida: float)
+        + getGrado_rampa(): float
+        + setGrado_rampa(grado_rampa: float)
     }
 
     class Rodador {
-        - pedaleo: double
-        + getPedaleo(): double
-        + setPedaleo(pedaleo: double)
+        - pedaleo: float
+        + getPedaleo(): float
+        + setPedaleo(pedaleo: float)
     }
 
     class Gregario {
@@ -74,10 +74,10 @@
     class Escuadron {
         - nombre_escuadron: String
         - pais: String
-        - tiempo_ciclistas: double
+        - tiempo_ciclistas: float
         - ciclistas: Ciclista[]
-        - masajista: Masajista
-        + sumarTiempos(tiempo: double)
+        - fisioterapeuta : Fisioterapeuta
+        + sumarTiempos(tiempo: float)
     }
 
     class Fisioterapeuta {
