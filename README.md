@@ -31,6 +31,8 @@
 
     class Contrarrelojista {
         - velocidad_maxima: double
+        + visualizar(): String
+        + concentrarse(): String
         + getVelocidad_maxima(): double
         + setVelocidad_maxima(velocidad_maxima: double)
     }
@@ -38,6 +40,8 @@
     class Embalador {
         - potencia_promedio: double
         - velocidad_promedio: double
+        + aumentar_ritmo(): String
+        + bajar_ritmo(): String
         + getPotencia_promedio(): double
         + setPotencia_promedio(potencia_promedio: double)
         + getVelocidad_promedio(): double
@@ -47,6 +51,8 @@
     class Escalador {
         - aceleracion_subida: double
         - grado_rampa: double
+        + pedalear_sentado(): String
+        + pedalear_depie(): String
         + getAceleracion_subida(): double
         + setAceleracion_subida(aceleracion_subida: double)
         + getGrado_rampa(): double
@@ -74,51 +80,9 @@
         + sumarTiempos(tiempo: double)
     }
 
-    class Masajista {
+    class Fisioterapeuta {
         + getCedula(): int
         + setCedula(cedula: int)
-    }
-
-    class Funcion_peloton {
-        <<enumeration>>
-        ABASTECEDOR
-        MANTENER_EL_RITMO
-        CAPTURA_DE_FUGAS
-        POSICIONAR_AL_LIDER
-        PROTEGER_AL_LIDER
-    }
-
-    class Muestra {
-        <<interface>>
-        + muestraDatos(): String
-    }
-
-    class MuestraCadencia {
-        <<interface>>
-        + muestraCadencia(): String
-    }
-
-    class Preparable {
-        <<interface>>
-        + prepararse(): String
-    }
-
-    class Preparable_contrarrelojista {
-        <<interface>>
-        + visualizar(): String
-        + concentrarse(): String
-    }
-
-    class Preparable_embalador {
-        <<interface>>
-        + aumentar_ritmo(): String
-        + bajar_ritmo(): String
-    }
-
-    class Preparable_escalador {
-        <<interface>>
-        + pedalear_sentado(): String
-        + pedalear_depie(): String
     }
 
     Persona <|-- Ciclista
@@ -128,13 +92,7 @@
     Ciclista <|-- Escalador
     Ciclista <|-- Rodador
     Ciclista <|-- Gregario
-    Escuadron --> Ciclista : tiene
-    Escuadron --> Masajista : incluye
-    Gregario --> Funcion_peloton : usa
-    Rodador ..|> MuestraCadencia
-    Rodador ..|> Muestra
-    Gregario ..|> Muestra
-    Escalador ..|> Preparable_escalador
-    Embalador ..|> Preparable_embalador
-    Contrarrelojista ..|> Preparable_contrarrelojista
-    Ciclista ..|> Preparable
+    Escuadron --> Ciclista 
+    Escuadron --> Fisioterapeuta 
+    Gregario --> Funcion_peloton 
+
