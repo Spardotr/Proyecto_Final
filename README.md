@@ -121,4 +121,3 @@
     Escuadron --> Fisioterapeuta : incluye un
     Escuadron --> Entrenador : tiene un
     Escuadron --> Carrera : participa
-    Gregario --> Funcion_peloton 
