@@ -1,5 +1,45 @@
 # Proyecto_Final
+Definicion del Problema
 
+El proyecto esta hecho para simular la dinamica de una carrera profesional de equipos de ciclistas (Escuadrones). Este sistema gestiona y modela los roles de cada ciclista, las condiciones de cada carrera, y las estadisticas de los resultados. Los elementos principales a explicar son los siguientes:
+
+1. Escuadrón
+Cada escuadrón debe cumplir con los siguientes requisitos:
+
+Contar con exactamente 6 ciclistas, distribuidos en roles específicos:
+Escalador: Especialista en etapas de montaña, con habilidades como aceleración en subida y manejo de pendientes.
+Rodador: Destacado en etapas llanas por su pedaleo constante y alta cadencia.
+Embalador: Enfocado en sprints finales, con alta velocidad y potencia promedio.
+Gregario: Ciclista de apoyo, que protege al líder y mantiene el ritmo del equipo.
+Clasicómano: Experto en carreras de un día o clásicas, con equilibrio entre velocidad y resistencia.
+Contrarrelojista: Ciclista con alta velocidad máxima, ideal para etapas individuales.
+El escuadrón tiene:
+Un nombre.
+Un país de origen (opcional).
+Un atributo estático que registra el tiempo acumulado de todos sus ciclistas.
+2. Ciclistas
+Cada ciclista cuenta con:
+
+Identificador único, nombre, y tiempo acumulado (inicia en 0 minutos).
+Especialidad y contextura, que afectan su desempeño en las carreras.
+Resistencia y energía, atributos dinámicos que cambian según las condiciones de las carreras.
+Métodos para:
+Mostrar sus atributos de forma específica (por ejemplo, con el método imprimirTipo, que detalla el rol del ciclista).
+3. Simulación de carreras
+Los escuadrones participan en diferentes tipos de carreras:
+Etapas de montaña, llanos con curvas, semi llanos, carreras de un solo día, y llanos en recta.
+Según el tipo de carrera, se selecciona al ciclista más adecuado para competir.
+Los gregarios no compiten directamente, pero apoyan al líder del escuadrón.
+Durante la carrera:
+A cada ciclista se le asigna un tiempo aleatorio no mayor a 36,000 segundos.
+Factores como clima (lluvioso, soleado) y dificultad de la etapa afectan el rendimiento.
+Eventos aleatorios, como fallos mecánicos o caídas, penalizan o benefician el tiempo de los ciclistas.
+4. Resultados y estadísticas
+Al finalizar la carrera, se generan los siguientes datos:
+
+Tiempos acumulados por escuadrón.
+Ciclistas destacados.
+Ganador de la etapa, con información detallada del ciclista y su escuadrón.
 
 ```mermaid
   classDiagram
