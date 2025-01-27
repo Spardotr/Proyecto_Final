@@ -10,7 +10,7 @@
 
     class Ciclista {
         - identificador: int
-        - tiempo: double
+        - tiempo: float
         - especialidad: String
         - contextura: String
         + getIdentificador(): int
