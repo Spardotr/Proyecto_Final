@@ -4,6 +4,7 @@ Definicion del Problema
 El proyecto esta hecho para simular la dinamica de una carrera profesional de equipos de ciclistas (Escuadrones). Este sistema gestiona y modela los roles de cada ciclista, las condiciones de cada carrera, y las estadisticas de los resultados. Los elementos principales a explicar son los siguientes:
 
 1. Escuadrón
+
 Cada escuadrón debe cumplir con los siguientes requisitos:
 
 Contar con exactamente 6 ciclistas, distribuidos en roles específicos:
@@ -13,10 +14,12 @@ Embalador: Enfocado en sprints finales, con alta velocidad y potencia promedio.
 Gregario: Ciclista de apoyo, que protege al líder y mantiene el ritmo del equipo.
 Clasicómano: Experto en carreras de un día o clásicas, con equilibrio entre velocidad y resistencia.
 Contrarrelojista: Ciclista con alta velocidad máxima, ideal para etapas individuales.
+
 El escuadrón tiene:
 Un nombre.
 Un país de origen (opcional).
 Un atributo estático que registra el tiempo acumulado de todos sus ciclistas.
+
 2. Ciclistas
 Cada ciclista cuenta con:
 
