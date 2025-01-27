@@ -7,7 +7,9 @@ El proyecto esta hecho para simular la dinamica de una carrera profesional de eq
 
 Cada escuadrón debe cumplir con los siguientes requisitos:
 
--Contar con exactamente 6 ciclistas, distribuidos en roles específicos:
+
+Contar con exactamente 6 ciclistas, distribuidos en roles específicos:
+
 
 -Escalador: Especialista en etapas de montaña, con habilidades como aceleración en subida y manejo de pendientes.
 
@@ -21,7 +23,9 @@ Cada escuadrón debe cumplir con los siguientes requisitos:
 
 -Contrarrelojista: Ciclista con alta velocidad máxima, ideal para etapas individuales.
 
+
 El escuadrón tiene:
+
 
 -Un nombre.
 
@@ -29,9 +33,12 @@ El escuadrón tiene:
 
 -Un atributo estático que registra el tiempo acumulado de todos sus ciclistas.
 
+
 2. Ciclistas
 
+
 Cada ciclista cuenta con:
+
 
 -Identificador único, nombre, y tiempo acumulado (inicia en 0 minutos).
 
@@ -39,16 +46,22 @@ Cada ciclista cuenta con:
 
 -Resistencia y energía, atributos dinámicos que cambian según las condiciones de las carreras.
 
+
 3. Simulación de carreras
 
--Los escuadrones participan en diferentes tipos de carreras:
+
+Los escuadrones participan en diferentes tipos de carreras:
+
 
 -Etapas de montaña, llanos con curvas, semi llanos, carreras de un solo día, y llanos en recta.
 
 Según el tipo de carrera, se selecciona al ciclista más adecuado para competir.
+
 Los gregarios no compiten directamente, pero apoyan al líder del escuadrón.
 
+
 Durante la carrera:
+
 
 -A cada ciclista se le asigna un tiempo aleatorio no mayor a 36,000 segundos.
 
@@ -56,9 +69,12 @@ Durante la carrera:
 
 -Eventos aleatorios, como fallos mecánicos o caídas, penalizan o benefician el tiempo de los ciclistas.
 
+
 5. Resultados y estadísticas
 
+
 Al finalizar la carrera, se generan los siguientes datos:
+
 
 -Tiempos acumulados por escuadrón.
 
