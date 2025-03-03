@@ -147,6 +147,7 @@ El siguiente diagrama representa la estructura de clases y sus relaciones en el 
         + escuadron2: Escuadron
         + escuadron3: Escuadron
         + iniciar_carrera()
+    }
     class Vista {
         + iniciar_interfaz()
     }
