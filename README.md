@@ -33,48 +33,6 @@ Los escuadrones pueden competir en distintas **etapas de carrera** con condicion
 ## 📊 **Diagrama de Clases**
 El siguiente diagrama representa la estructura de clases y sus relaciones en el proyecto:
 
-```mermaid
-classDiagram
-    class Persona {
-        + nombre: str
-        + cedula: str
-    }
-
-    class Ciclista {
-        + identificador: str
-        + contextura: str
-        + especialidad: str
-        + tiempo: float
-        + get_identificador()
-        + set_tiempo()
-        + imprimir_tipo()
-    }
-
-    class Escuadron {
-        + nombre: str
-        + pais: str
-        + ciclistas: list
-        + agregar_ciclista()
-        + mostrar_ciclistas()
-    }
-
-    class Gestor {
-        + escuadron1: Escuadron
-        + escuadron2: Escuadron
-        + escuadron3: Escuadron
-        + iniciar_carrera()
-    }
-
-    class Vista {
-        + iniciar_interfaz()
-    }
-
-    Persona <|-- Ciclista
-    Escuadron "1" *-- "6" Ciclista
-    Gestor "1" *-- "3" Escuadron
-    Gestor "1" *-- "1" Vista
-
-
 
 ```mermaid
   classDiagram
