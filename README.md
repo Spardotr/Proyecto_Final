@@ -1,137 +1,79 @@
-# Proyecto_Final
-Definicion del Problema
+# 🚴‍♂️ Simulación de Carrera de Ciclistas
+
+**📌 Descripción:**  
+Este proyecto simula una carrera de ciclistas utilizando una interfaz gráfica y una ejecución en consola. Se modelan escuadrones de ciclistas con distintos roles y se ejecutan carreras en diversas etapas.
+
+---
+
+## 🎯 **Planteamiento del Problema**
+El problema consiste en simular una competencia entre ciclistas, donde cada escuadrón contiene 6 ciclistas con roles distintos:  
+- **Escalador**
+- **Rodador**
+- **Embalador**
+- **Gregario**
+- **Clasicómano**
+- **Contrarrelojista**
+
+Cada ciclista tiene atributos como **nombre, identificador, especialidad, cédula y tiempo de carrera acumulado**.  
+Los escuadrones pueden competir en distintas **etapas de carrera** con condiciones específicas.
+
+---
+
+## 💡 **Solución Implementada**
+- Se modeló cada ciclista como una clase en Python con **POO (Programación Orientada a Objetos)**.
+- Se creó una clase `Escuadron` que contiene a los ciclistas y gestiona su información.
+- Se implementó un **`Gestor`** que maneja la lógica de la carrera.
+- Se diseñó una **interfaz gráfica** con `Tkinter` para gestionar la simulación visualmente.
+- Se agregó un **modo consola** para pruebas de rendimiento sin la interfaz gráfica.
+- Se implementó una **barra de progreso** para simular la duración de la carrera.
+- Se permite seleccionar **diferentes etapas** y condiciones de carrera.
+
+---
+
+## 📊 **Diagrama de Clases**
+El siguiente diagrama representa la estructura de clases y sus relaciones en el proyecto:
+
+```mermaid
+classDiagram
+    class Persona {
+        + nombre: str
+        + cedula: str
+    }
+
+    class Ciclista {
+        + identificador: str
+        + contextura: str
+        + especialidad: str
+        + tiempo: float
+        + get_identificador()
+        + set_tiempo()
+        + imprimir_tipo()
+    }
+
+    class Escuadron {
+        + nombre: str
+        + pais: str
+        + ciclistas: list
+        + agregar_ciclista()
+        + mostrar_ciclistas()
+    }
+
+    class Gestor {
+        + escuadron1: Escuadron
+        + escuadron2: Escuadron
+        + escuadron3: Escuadron
+        + iniciar_carrera()
+    }
+
+    class Vista {
+        + iniciar_interfaz()
+    }
+
+    Persona <|-- Ciclista
+    Escuadron "1" *-- "6" Ciclista
+    Gestor "1" *-- "3" Escuadron
+    Gestor "1" *-- "1" Vista
 
-El proyecto esta hecho para simular la dinamica de una carrera profesional de equipos de ciclistas (Escuadrones). Este sistema gestiona y modela los roles de cada ciclista, las condiciones de cada carrera, y las estadisticas de los resultados. Los elementos principales a explicar son los siguientes:
-
-1. Escuadrón
-
-Cada escuadrón debe cumplir con los siguientes requisitos:
-
-
-Cada escuadron tiene exactamente 6 ciclistas, distribuidos en los distintos roles específicos:
-
-
-- Escalador: Especialista en etapas de montaña, aconstumbrados a las pendientes y acelerar el ritmo en subida.
-
-- Rodador: Destacado en etapas planas por su pedaleo constante y buena resistencia.
-
-- Embalador: Enfocado en los sprints finales, con alta velocidad y potencia promedio.
-
-- Gregario: Ciclista de apoyo, que protege al líder y mantiene el ritmo del equipo.
-
-- Clasicómano: Experto en carreras de un día o clásicas, con equilibrio entre velocidad y resistencia.
-
-- Contrarrelojista: Ciclista con alta velocidad máxima, ideal para etapas individuales.
-
-
-El escuadrón tiene:
-
-
-- Un nombre.
-
-- Un país de origen (opcional).
-
-- Un atributo estático que registra el tiempo acumulado de todos sus ciclistas.
-
-
-2. Ciclistas
-
-
-Cada ciclista cuenta con:
-
-
-- Identificador único, nombre, y tiempo acumulado (inicia en 0 minutos).
-
-- Especialidad y contextura, que afectan su desempeño en las carreras.
-
-- Resistencia y energía, atributos dinámicos que cambian según las condiciones de las carreras.
-
-
-3. Simulación de carreras
-
-
-Los escuadrones participan en diferentes tipos de carreras:
-
-
-- Etapas de montaña, llanos con curvas, semi llanos, carreras de un solo día, y llanos en recta.
-
-Según el tipo de carrera, se selecciona al ciclista más adecuado para competir.
-
-Los gregarios no compiten directamente, pero apoyan al líder del escuadrón.
-
-
-Durante la carrera:
-
-
-- A cada ciclista se le asigna un tiempo aleatorio no mayor a 36,000 segundos.
-
-- Factores como clima (lluvioso, soleado) y dificultad de la etapa afectan el rendimiento.
-
-- Eventos aleatorios, como fallos mecánicos o caídas, penalizan o benefician el tiempo de los ciclistas.
-
-
-5. Resultados y estadísticas
-
-
-Al finalizar la carrera, se generan los siguientes datos:
-
-
-- Tiempos acumulados por escuadrón.
-
-- Ciclistas destacados.
-
-- Ganador de la etapa, con información detallada del ciclista y su escuadrón.
-
-
-Solución Preliminar
-
-La solución al problema se basa en este programa orientado a objetos, utilizando las herramientas vistas en clase como abstracción, herencia, composición y polimorfismo. A continuación, se detalla la estructura y funcionalidad del sistema:
-
-1. Estructura del sistema
-
-El sistema incluye las siguientes clases:
-
-- Persona: Clase base para Ciclista y Fisioterapeuta.
-
-- Ciclista: Clase abstracta que define los atributos y métodos comunes a todos los ciclistas.
-
-- Subclases específicas: Escalador, Rodador, Embalador, Gregario, Clasicómano, Contrarrelojista.
-
-- Escuadron: Representa al equipo, con métodos para gestionar ciclistas, tiempos acumulados y estadísticas.
-
-- Carrera: Define los parámetros de cada etapa (tipo, clima, dificultad) y simula la competencia.
-
-- Entrenador: Mejora atributos como resistencia y energía de los ciclistas antes de la carrera.
-
-2. Dinámica del sistema
-
-Entrenamiento y estrategia
-
-Antes de la carrera, un Entrenador puede mejorar los atributos de los ciclistas.
-
-Cada escuadrón define una estrategia para la carrera, como priorizar al escalador en etapas de montaña o al rodador en etapas llanas.
-
-Simulación de carreras
-
-Los ciclistas seleccionados compiten según las condiciones de la etapa.
-
-Se simulan los siguientes factores:
-
-- Clima: Afecta atributos como resistencia y energía (ejemplo: lluvia beneficia a escaladores).
-
-- Dificultad: Reduce la energía de los ciclistas proporcionalmente al nivel de exigencia.
-
-- Eventos aleatorios: Introducen variabilidad con penalizaciones (fallos mecánicos, caídas) o beneficios (condiciones ideales).
-
-Generación de estadísticas
-
-Al finalizar una carrera, se calculan:
-
-- Tiempos totales por escuadrón.
-
-- Ciclistas más destacados (por tiempo acumulado y desempeño).
-
-- Ganador de la etapa.
 
 
 ```mermaid
