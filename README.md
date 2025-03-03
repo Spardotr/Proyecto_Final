@@ -142,6 +142,18 @@ El siguiente diagrama representa la estructura de clases y sus relaciones en el 
     }
 
 
+    class Gestor {
+        + escuadron1: Escuadron
+        + escuadron2: Escuadron
+        + escuadron3: Escuadron
+        + iniciar_carrera()
+    class Vista {
+        + iniciar_interfaz()
+    }
+
+    Gestor "1" *-- "3" Escuadron
+    Gestor "1" *-- "1" Vista
+
 
     Persona <|-- Ciclista
     Ciclista <|-- Clasicomano
