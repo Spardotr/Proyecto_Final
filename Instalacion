@@ -1,0 +1,17 @@
+# 1️⃣ Clona el repositorio
+git clone https://github.com/Spardotr/Proyecto_Final
+
+# 2️⃣ Entra a la carpeta del proyecto
+cd Proyecto_Ciclistas
+
+# 3️⃣ Crea un entorno virtual
+python -m venv venv
+
+# 4️⃣ Activa el entorno virtual
+# (Windows)
+venv\Scripts\activate
+# (Mac/Linux)
+source venv/bin/activate
+
+# 6️⃣ Ejecuta el programa
+python Modelo/launcher.py
